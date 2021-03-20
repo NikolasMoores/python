@@ -6,6 +6,11 @@ def main():
 
     print(rating)
 
+    import random
+
+    rating_random = rate_score(random.randint(1, 100))
+    print(rating_random)
+
 
 def rate_score(score):
     if score > 100 or score < 0:
