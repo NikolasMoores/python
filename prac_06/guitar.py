@@ -1,0 +1,23 @@
+class Guitar:
+
+    def __init__(self, name="", year=0, cost=0):
+        """Initialise a Car instance.
+
+        fuel: float, one unit of fuel drives one kilometre
+        """
+        self.name = name
+        self.year = year
+        self.cost = cost
+
+    def get_age(self):
+        age = 2021 - self.year
+        return age
+
+    def is_vintage(self):
+        if self.get_age() < 50:
+            return False
+        else:
+            return True
+
+    def __str__(self):
+        return "{} ({}) : ${:.2f}".format(self.name, self.year, self.cost)
